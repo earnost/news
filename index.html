@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Eikon News</title>
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* -----------------------------
+   BASE
+------------------------------*/
+
+:root {
+    --paper: #f6f0de;
+    --ink: #111;
+    --rule: #222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Libre Baskerville", serif;
+    line-height: 1.6;
+}
+
+/* -----------------------------
+   MASTHEAD
+------------------------------*/
+
+.masthead {
+    text-align: center;
+    padding: 25px 15px 10px;
+    border-bottom: 5px double var(--rule);
+}
+
+.logo {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.masthead h1 {
+    font-size: 3.2rem;
+    letter-spacing: 0.02em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.tagline {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    margin-top: 6px;
+}
+
+.issue-info {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* NAV */
+
+nav {
+    margin-top: 15px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.intro {
+
+    max-width: 700px;
+
+    margin: 5rem auto;
+
+    padding: 0 2rem;
+
+    text-align: center;
+
+}
+
+.intro p {
+
+    margin: 0 auto;
+
+    max-width: 600px;
+
+    text-align: center;
+
+    line-height: 1.9;
+
+}
+/* -----------------------------
+   HERO (THIS WEEK)
+------------------------------*/
+
+.hero {
+    padding: 30px 20px;
+    border-bottom: 2px solid var(--rule);
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero h2 {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    justify-content: center;
+    max-width: 700px;
+    text-align: justify;
+}
+
+.button {
+    display: grid;
+    place-items: center;
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: 2px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    text-align: justify;
+}
+
+.button:hover {
+    background: var(--rule);
+    color: var(--paper);
+}
+
+/* -----------------------------
+   GRID SECTIONS
+------------------------------*/
+
+.department-grid {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.department {
+    border: 3px double var(--rule);
+    padding: 20px;
+    background: rgba(255,255,255,0.25);
+}
+
+.department h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.department p,
+.department ul {
+    font-size: 0.95rem;
+}
+
+.department ul {
+    padding-left: 18px;
+}
+
+.department a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.department a:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------
+   COMMUNITY
+------------------------------*/
+
+.community {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    border-top: 5px double var(--rule);
+    border-bottom: 5px double var(--rule);
+    text-align: center;
+}
+
+.community-links a {
+    display: inline-block;
+    margin: 8px 12px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+/* -----------------------------
+   SUPPORT SECTION
+------------------------------*/
+
+.support {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.support form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.support input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--rule);
+    background: transparent;
+}
+
+.support button {
+    padding: 10px 14px;
+    border: 2px solid var(--rule);
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+}
+
+/* -----------------------------
+   FOOTER
+------------------------------*/
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 5px double var(--rule);
+    font-size: 0.8rem;
+}
+
+/* -----------------------------
+   RESPONSIVE
+------------------------------*/
+
+@media (max-width: 900px) {
+
+.department-grid {
+    grid-template-columns: 1fr;
+}
+
+.support {
+    grid-template-columns: 1fr;
+}
+
+.hero h3 {
+    font-size: 1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="masthead">
+
+<img src="images/logo_trans.png" class="logo" alt="Eikon News">
+
+<h1>EIKON NEWS</h1>
+
+<p class="tagline">
+Independent Journalism • Weekly Publication
+</p>
+
+<!-- <nav>
+
+<a href="#">Home</a>
+<a href="#">Archive</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+</nav>
+-->
+</header>
+
+<main class="container">
+<section class="intro">
+
+
+<p class="bio">
+
+Eikon News is an independent publication with the goal of delivering simple news from a common sense standpoint.
+So much of modern media news coverage does not apply to the everyday person. These articles focus on some quick bullet points from events throughtout the week
+and are followed by Christ centered applications.
+New editions are published weekly.
+
+</p>
+<!-- <h5>What does Eikon mean?</h5>
+<p>Eikon comes from the greek word "EIKON" meaning image, used in scripture as "EIKON o THEOS" or Imag of God.
+-->
+</p>
+
+<a class="button" href="papers/1_070426.html">
+Read the Latest Edition
+</a>
+
+</section>
+
+
+<div class="department-grid">
+
+<section class="department">
+
+<h2>Latest Papers</h2>
+
+<ul>
+
+<li><a href="papers/1_070426.html">Issue 001</a></li>
+<li>Issue 002 Coming Next Week</li>
+
+</ul>
+
+</section>
+
+
+<section class="department">
+
+<h2>Editorial</h2>
+
+<p class="placeholder">
+Content coming soon.
+</p>
+
+</section>
+
+
+<section class="department">
+
+<h2>Monthly Feature</h2>
+
+<p class="placeholder">
+<a href="papers/1_070426.html">USA 250</a>
+</p>
+
+</section>
+
+
+<section class="department">
+
+<h2>Summer Flix</h2>
+
+<p class="placeholder">
+Content coming soon.
+</p>
+
+</section>
+
+
+<section class="department">
+
+<h2>Community</h2>
+
+<p class="placeholder">
+Content coming soon.
+</p>
+
+</section>
+
+
+<section class="department">
+
+<h2>Support the Paper</h2>
+
+<a href="#">Subscribe - Coming Soon!</a><br>
+<!-- <a href="#">Donate</a> -->
+
+</section>
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 Eikon News
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
