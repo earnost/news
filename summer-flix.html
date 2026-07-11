@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Summer Flix Movie Reviews | Eikon News</title>
+    <meta
+        name="description"
+        content="Summer Flix features movie reviews and film commentary from Eikon News.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Eikon News">
+    <meta property="og:title" content="Summer Flix Movie Reviews | Eikon News">
+    <meta
+        property="og:description"
+        content="Movie reviews and film commentary from Eikon News.">
+    <meta property="og:image" content="images/logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Summer Flix Movie Reviews | Eikon News">
+    <meta
+        name="twitter:description"
+        content="Movie reviews and film commentary from Eikon News.">
+    <meta name="twitter:image" content="images/logo.png">
+
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    
+.review-header{
+
+    display:grid;
+
+    grid-template-columns:400px 1fr;
+
+    gap:2rem;
+
+    align-items:start;
+
+    max-width:950px;
+
+    margin:3rem auto;
+
+}
+
+.verdict-box{
+
+    width:300px;
+
+
+    margin:0 0 2rem 2rem;
+
+    padding:1.5rem;
+
+    border:4px double var(--rule);
+
+    background:rgba(255,255,255,.08);
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+.verdict-header{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    letter-spacing:.35em;
+
+    font-size:.72rem;
+
+    margin-bottom:.6rem;
+
+}
+
+.verdict-box h3{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    margin:0;
+
+    font-size:1rem;
+
+    letter-spacing:.15em;
+
+}
+
+.overall-score{
+
+    text-align:center;
+
+    font-size:4rem;
+
+    font-weight:bold;
+
+    margin:.8rem 0 .2rem;
+
+    line-height:1;
+
+}
+
+.overall-score span{
+
+    font-size:1.3rem;
+
+    font-weight:normal;
+
+}
+
+.recommendation{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    letter-spacing:.15em;
+
+    font-size:.75rem;
+
+    margin-bottom:1rem;
+
+}
+
+.verdict-box hr{
+
+    border:none;
+
+    border-top:1px solid var(--rule);
+
+    margin:1rem 0;
+
+}
+
+.rating-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:.45rem 0;
+
+    border-bottom:1px dotted rgba(0,0,0,.18);
+
+    font-size:.95rem;
+
+}
+
+.rating-row:last-of-type{
+
+    border-bottom:none;
+
+}
+
+.verdict-box h4{
+
+    margin:1rem 0 .5rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.15em;
+
+    font-size:.8rem;
+
+}
+
+.content-notes{
+
+    font-size:.9rem;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+.movie-poster{
+
+    width:300px;
+
+    padding:2rem;
+
+}
+
+.movie-poster img{
+
+    display:block;
+
+    width:100%;
+
+    border:4px double var(--rule);
+
+}
+
+/*new stuff */
+
+.review-card{
+
+    display:grid;
+
+    grid-template-columns:220px 300px 1fr;
+
+    gap:2rem;
+
+    align-items:start;
+
+    max-width:1200px;
+
+    margin:3rem auto;
+
+    padding:2rem;
+
+    border-top:3px double var(--rule);
+
+    border-bottom:3px double var(--rule);
+
+}
+
+
+.review-summary{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:2rem;
+
+}
+
+.review-summary h2{
+
+    margin-top:0;
+
+    font-size:2rem;
+
+    margin:0 0 0rem;
+
+}
+
+.review-summary p{
+
+    text-align:justify;
+
+    line-height:1.5;
+
+}
+
+.review-summary a{
+
+    margin-top:1rem;
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    letter-spacing:.1em;
+
+}
+
+.review-summary ul{
+
+    margin-top:0rem;
+    margin-left:0rem;
+}
+
+
+@media (max-width:1000px){
+
+.review-card{
+
+    grid-template-columns:1fr;
+
+}
+
+.movie-poster{
+
+    max-width:250px;
+
+    margin:auto;
+
+}
+
+}
+
+</style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Summer Flix Movie Reviews",
+        "description": "Movie reviews and film commentary from Eikon News.",
+        "isPartOf": {
+            "@type": "NewsMediaOrganization",
+            "name": "Eikon News"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="masthead">
+        <div class="masthead-title">
+            <img
+                class="masthead-logo left"
+                src="images/logo_trans.png"
+                alt="">
+
+            <h1>THE EIKON</h1>
+
+            <img
+                class="masthead-logo"
+                src="images/logo_trans.png"
+                alt="">
+        </div>
+
+        <p class="tagline">Summer Flix &bull; Reviews &bull; Commentary</p>
+
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="archive.html">Archive</a>
+            <a href="editorial.html">Opinion</a>
+            <a href="papers/02-supreme-court-concludes-term-07-11-2026.html">Latest Paper</a>
+        </nav>
+    </header>
+
+    <main class="reviews-page">
+        <section class="reviews-intro">
+            <p class="section-label">
+                <a href="index.html">Back to Home Page</a>
+            </p>
+
+            <h2>Summer Flix</h2>
+            <p>
+                Movie reviews and film commentary for summer releases
+            </p>
+        </section>
+
+
+<!--REVIEW STARTS-->
+
+<section class="review-card">
+
+    <div class="movie-poster">
+        <img src="posters/supergirl.webp" alt="Super Girl movie poster">
+    </div>
+
+    <aside class="verdict-box">
+
+        <div class="verdict-header">
+            THE EIKON
+        </div>
+
+        <h3>Film Verdict</h3>
+
+        <!-- Average gets inserted here -->
+        <div class="overall-score" id="overall-score">
+            0.0<span>/10</span>
+        </div>
+
+        <div class="recommendation" id="recommendation">
+            —
+        </div>
+
+        <div class="rating-row">
+            <span>Story</span>
+            <span class="score">3</span>
+        </div>
+
+        <div class="rating-row">
+            <span>Performances</span>
+            <span class="score">3</span>
+        </div>
+
+        <div class="rating-row">
+            <span>Direction</span>
+            <span class="score">3</span>
+        </div>
+
+        <div class="rating-row">
+            <span>Cinematography</span>
+            <span class="score">4</span>
+        </div>
+
+        <div class="rating-row">
+            <span>Music</span>
+            <span class="score">4</span>
+        </div>
+
+        <div class="rating-row">
+            <span>Themes</span>
+            <span class="score">2</span>
+        </div>
+
+    </aside>
+
+    <div class="review-summary">
+
+        <h2>Supergirl</h2>
+
+        <p>
+            There is little virtue or character developement on display.
+            The film feels as though its target audience is middle school girls.
+            <small>
+                <ul>
+            <li>Directed by Craig Gillespie </li>
+            <li>Score by Claudia Sarne </li>
+            <li>Photography by Rob Hardy </li>
+            <li>Edited by Fred Raskin and Tatiana S. Riegel </li>
+            <li>Shot on Sony Venice II </li>
+            <li>Panavision Ultra Panatar II</li>
+            <li>Runtime: 108 minutes </li>
+            <li>Rated: PG-13</li>
+            </ul>
+            </small>
+        </p>
+
+
+    </div>
+
+</section>
+
+<!--REVIEW ENDS-->
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eikon News</p>
+    </footer>
+</body>
+<script src="script.js"></script>   
+</html>
