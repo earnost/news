@@ -55,34 +55,46 @@ updateArchiveResults();
 
 
 
-const scores = document.querySelectorAll(".score");
+document.querySelectorAll(".review-card").forEach(card => {
 
-let total = 0;
+    const scores = card.querySelectorAll(".score");
 
-scores.forEach(score => {
+    let total = 0;
 
-    total += parseFloat(score.textContent);
+    scores.forEach(score => {
+
+        total += Number(score.textContent);
+
+    });
+
+    const average = (total / scores.length).toFixed(1);
+
+    card.querySelector(".overall-score").innerHTML =
+        `${average}<span>/10</span>`;
+
+    let verdict;
+
+    if (average >= 9.5)
+        verdict = "Editor's Choice";
+    else if (average >= 8.5)
+        verdict = "Highly Recommended";
+    else if (average >= 7.5)
+        verdict = "Recommended";
+    else if (average >= 6.5)
+        verdict = "Worth Watching";
+    else if (average >= 5.0)
+        verdict = "Mixed Recommendation";
+    else
+        verdict = "Not Recommended";
+
+    card.querySelector(".recommendation").textContent = verdict;
 
 });
 
-const average = (total / scores.length).toFixed(1);
 
-document.getElementById("overall-score").innerHTML =
-    `${average}<span>/10</span>`;
 
-let verdict = "";
-
-if (average >= 9.5)
-    verdict = "Editor's Choice";
-else if (average >= 8.5)
-    verdict = "Highly Recommended";
-else if (average >= 7.5)
-    verdict = "Recommended";
-else if (average >= 6.5)
-    verdict = "Worth Watching";
-else if (average >= 5)
-    verdict = "Mixed Recommendation";
-else
-    verdict = "Not Recommended";
-
-document.getElementById("recommendation").textContent = verdict;
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2510209');
