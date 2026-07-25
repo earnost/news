@@ -46,7 +46,7 @@
 
       <changefreq>weekly</changefreq>
 
-      <priority>0.9</priority>
+      <priority>1</priority>
 
    </url>
 
@@ -103,6 +103,18 @@
       <loc>http://www.eikonnews.com/papers/03-USA-approves-first-new-nuclear-reactor-in-decade-07-18-2026</loc>
 
       <lastmod>2026-07-18</lastmod>
+
+      <changefreq>never</changefreq>
+
+      <priority>0.6</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://www.eikonnews.com/papers/04-new-prime-minister-in-united-kingdom-07-25-2026.html</loc>
+
+      <lastmod>2026-07-25</lastmod>
 
       <changefreq>never</changefreq>
 
