@@ -14,6 +14,18 @@
 
    </url>
 
+      <url>
+
+      <loc>http://www.eikonnews.com/parks</loc>
+
+      <lastmod>2026-08-15</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0</priority>
+
+   </url>
+
    <url>
 
       <loc>http://www.eikonnews.com/archive</loc>
@@ -122,11 +134,37 @@
 
    </url>
 
-    <url>
+   <url>
 
       <loc>http://www.eikonnews.com/papers/05-fauci-testifies-before-senate-committee-08012026</loc>
 
       <lastmod>2026-08-01</lastmod>
+
+      <changefreq>never</changefreq>
+
+      <priority>0.6</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://www.eikonnews.com/papers/06-eighty-thousand-moroccans-invade-spain-08-08-26</loc>
+
+      <lastmod>2026-08-08</lastmod>
+
+      <changefreq>never</changefreq>
+
+      <priority>0.6</priority>
+
+   </url>
+
+
+
+      <url>
+
+      <loc>http://www.eikonnews.com/papers/07-luigi-mangione-pleads-guilty-08-15-2026</loc>
+
+      <lastmod>2026-15-01</lastmod>
 
       <changefreq>never</changefreq>
 
