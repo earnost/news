@@ -158,13 +158,23 @@
 
    </url>
 
-
-
       <url>
 
       <loc>http://www.eikonnews.com/papers/07-luigi-mangione-pleads-guilty-08-15-2026</loc>
 
-      <lastmod>2026-15-01</lastmod>
+      <lastmod>2026-15-08</lastmod>
+
+      <changefreq>never</changefreq>
+
+      <priority>0.6</priority>
+
+   </url>
+
+         <url>
+
+      <loc>http://www.eikonnews.com/papers/08-karmelo-anthony-retrial-08-22-26</loc>
+
+      <lastmod>2026-22-08</lastmod>
 
       <changefreq>never</changefreq>
 
